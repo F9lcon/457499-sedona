@@ -26,13 +26,13 @@
             <h3>Настоящий городок</h3>
             <p>№1</p>
             <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
-            <img src="img/img-town.jpg" height="100" width="100" alt="Настоящий городок">
+            <img src="img/img-town.jpg" height="100" width="100" alt="Фото города">
           </li>
           <li class="bridge">
             <h3>Там есть мост дьявола</h3>
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="img/img-bridge.jpg" height="100" width="100" alt="Мост дьявола">
+            <img src="img/img-bridge.jpg" height="100" width="100" alt="Фото моста дьявола">
           </li>
           <li>
             <h3>Небольшая площадь</h3>
@@ -70,8 +70,26 @@
       <section>
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search" href="#">Поиск гостиницы в Седоне</a>
-        <!--Форму для ввода даты поездки я так понимаю пока не пишем-->
+        <a class="search" href="#">Поиск гостиницы в Седоне</a> <!--button?-->
+        <section>
+          <form action="get" method="https://echo.htmlacademy.ru">
+            <label for="date-arrival">Дата заезда</label>
+            <input type="date" name="date-arrival" id="date-arrival">
+            <label for="date-leaving">Дата выезда</label>
+            <input type="date" name="date-leaving" id="date-leaving">
+            <label for="number-adults">Взрослые</label>
+            <input type="number" name="number-adults" id="number-adults" min="1" step="1">
+            <button class="button-plus" aria-label="плюс один взрослый">+</button>
+            <button class="button-minus" aria-label="минус один взрослый">-</button>
+            <label for="number-kids">Дети</label>
+            <input type="number" name="number-kids" id="number-kids" min="1" step="1">
+            <button class="button-plus" aria-label="плюс один ребенок">+</button>
+            <button class="button-minus" aria-label="минус один ребенок">-</button>
+          <button type="submit">Найти</button>
+          </form>
+        <img src="#" width="10" height="10" alt="Иконка календаря для заезда">
+        <img src="#" width="10" height="10" alt="Иконка календаря для выезда">
+        </section>
       </section>
       <section class="map"><img src="img/img-map.jpg" height="100" width="100" alt="Карта"></section> <!--форма карты-->
     </main>
@@ -84,7 +102,7 @@
       </ul>
       <div>
         <p>Website by</p>
-        <a href="htmlacademy.ru"><img src="img/img-academy-logo.png" height="100" width="100" alt="htmlacademy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/img-academy-logo.png" height="100" width="100" alt="htmlacademy"></a>
       </div>
     </footer>
   </body>
