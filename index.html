@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="header-main">
@@ -28,7 +31,7 @@
             <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
             <img src="img/img-town.jpg" height="100" width="100" alt="Фото города">
           </li>
-          <li class="bridge">
+          <li class="feature-list-bridge">
             <h3>Там есть мост дьявола</h3>
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -67,7 +70,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="offer">
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <a class="search" href="#">Поиск гостиницы в Седоне</a> <!--button?-->
@@ -87,7 +90,7 @@
             <input type="number" name="number-kids" id="number-kids" min="1" step="1">
             <button class="button-plus" aria-label="плюс один ребенок">+</button>
             <button class="button-minus" aria-label="минус один ребенок">-</button>
-            <button type="submit">Найти</button>
+            <button class="offer-find" type="submit">Найти</button>
           </form>
         </section>
       </section>
