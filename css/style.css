@@ -29,7 +29,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -207,6 +206,23 @@ h3 {
 .button-plus:active,
 .button-minus:active {
   color: #81b3d2;
+}
+
+.map {
+  position: relative;
+}
+.map  iframe {
+  position: relative;
+  border: none;
+  z-index: 3;
+}
+
+.map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
 }
 
 .main-footer a,
@@ -805,12 +821,72 @@ input[type="radio"].visually-hidden {
 .form-offer {
   background-color: #fff;
   position: absolute;
-  display: flex;
   flex-wrap: wrap;
   width: 568px;
   left: 316px;
   bottom: -394px;
   height: 394px;
+  z-index: 5;
+  display: none;
+
+}
+
+.modal-show {
+  display: flex;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.8s;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(-2000px); }
+
+  70% {transform: translateX(80px); }
+
+  90% {transform: translateX(-20px); }
+
+  100% {transform: translateX(0px);}
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.dark {
+  height: 2730px;
+  width: 1200px;
+  opacity: 0.4;
+  z-index: 4;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.dark-show {
+  display: block;
 }
 
 input {
